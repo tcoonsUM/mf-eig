@@ -22,6 +22,6 @@ to NMC.
 Jupyter Notebook tutorial to be added soon.
 
 ## Examples
-See ['Final Paper Figures'](https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures)(https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures) to reproduce the results of our paper. Most data that require many CPU-hours of compute time are simply loaded in their respective scripts.
+See [Final Paper Figures](https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures) to reproduce the results of our paper. Most data that require many CPU-hours of compute time are simply loaded in their respective scripts.
 
 To reproduce all data, scripts can be found under [link coming soon](https://github.com/tcoonsUM/mf-eig/), for example to optimize $\text{N}_{\text{in}}$ for each problem and run the estimator over many trials.
