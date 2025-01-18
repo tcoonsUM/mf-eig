@@ -18,10 +18,16 @@ of the Reynolds-averaged Navier–Stokes (RANS) computational fluid dynamics (CF
 closure model. In these demonstrations, the MF-EIG estimator produces orders-of-magnitude reductions in estimator error relative
 to NMC.
 
+## Requirements
+This project utilizes the MXMCPy framework from [this paper](https://www.sciencedirect.com/science/article/pii/S0021999121007774) and [Python package](https://github.com/nasa/MXMCPy). In addition to the usual numpy, scipy, and matplotlib installations, these scripts assume you have MXMCPy and its own requirements installed. To install MXMCPy, you can run:
+```
+pip install mxmcpy
+```
+
 ## Tutorial/Usage
 Jupyter Notebook tutorial to be added soon.
 
 ## Examples
 See [Final Paper Figures](https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures) to reproduce the results of our paper. Most data that require many CPU-hours of compute time are simply loaded in their respective scripts.
 
-To reproduce all data, scripts can be found under [link coming soon](https://github.com/tcoonsUM/mf-eig/), for example to optimize $\text{N}_{\text{in}}$ for each problem and run the estimator over many trials.
+To run your own examples for general ensembles of utility models, scripts can be found under [link coming soon](https://github.com/tcoonsUM/mf-eig/), for example to optimize $\text{N}_{\text{in}}$ for each problem and run the estimator over many trials.
