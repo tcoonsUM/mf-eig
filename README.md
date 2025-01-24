@@ -1,22 +1,14 @@
 # MF-EIG
 A multi-fidelity estimator of the expected information gain (EIG) for Bayesian optimal experimental design (OED).
 
-## Abstract
-In many engineering and scientific applications, physical experiments are vital but costly and time-demanding. Therefore, it
-is important to find experimental design conditions that maximize the value of these experiments while minimizing the associated
-costs. Bayesian optimal experimental design (OED) provides a rigorous statistical framework for seeking the ideal experimental
-design by leveraging a mathematical model of the experiment. When the goal of a given experiment is model-parameter inference, 
-this process generally requires the use of a nested Monte Carlo (NMC) estimator to approximate the Expected Information
-Gain (EIG) of each experimental design. Using NMC estimators can be prohibitively expensive in complex physical systems in
-which accurate models are computationally intensive. To accelerate the OED process, we propose a multi-fidelity EIG (MF-EIG)
-estimator in which an ensemble of utility models of varying accuracy and cost are combined into a single EIG estimator via the
-approximate control variate (ACV) method. To enable ACV, we first derive an alternate form of the EIG. We then analyze and
-discuss two aspects of the inner loop of the estimator that can improve estimator performance. Finally, the MF-EIG estimator is
-demonstrated on two OED problems: (1) a nonlinear model problem, where the estimator properties and performance improvements over
-NMC are empirically investigated, and (2) a turbulent-flow experimental application that aims to infer the parameters
-of the Reynolds-averaged Navier–Stokes (RANS) computational fluid dynamics (CFD) shear-stress transport (SST) turbulence
-closure model. In these demonstrations, the MF-EIG estimator produces orders-of-magnitude reductions in estimator error relative
-to NMC.
+## Paper
+The pre-print is available on arXiv [here](https://arxiv.org/abs/2501.10845).
+
+## Description
+The EIG is an information-theoretic design criterion popularly used in Bayesian OED. However, its computation for nonlinear models is not tractable, and sampling-based estimators such as the nested Monte Carlo (NMC) estimator must be used in many modeling scenarios. Since such estimators require numerous evaluations of a forward predictive model of the given experiment, NMC estimators are often prohibitively expensive for high-fidelity models. We aim to expedite EIG computation by enabling multi-fidelity estimation via approximate control variate (ACV) estimators. In order to do so, a novel reparameterization of the EIG is presented in our paper, changing its expectations to be independent of the data models, a requirement for compatibility with ACV. When well-correlated and cheap low-fidelity models are available, the MF-EIG estimator can produce multiple orders-of-magnitude error reduction with respect to the original single-fidelity NMC estimator.
+
+## Authors
+[Thomas E. Coons](https://sites.google.com/umich.edu/tcoons/home) and [Xun Huan](https://uq.engin.umich.edu/)
 
 ## Requirements
 This project utilizes the MXMCPy framework from [this paper](https://www.sciencedirect.com/science/article/pii/S0021999121007774) and [Python package](https://github.com/nasa/MXMCPy). In addition to the usual numpy, scipy, and matplotlib installations, these scripts assume you have MXMCPy and its own requirements installed. To install MXMCPy, you can run:
@@ -30,4 +22,4 @@ Jupyter Notebook tutorial to be added soon.
 ## Examples
 See [Final Paper Figures](https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures) to reproduce the results of our paper. Most data that require many CPU-hours of compute time are simply loaded in their respective scripts.
 
-To run your own examples for general ensembles of utility models, scripts can be found under [link coming soon](https://github.com/tcoonsUM/mf-eig/), for example to optimize $\text{N}_{\text{in}}$ for each problem and run the estimator over many trials.
+Tutorials will also be provided to run your own mf-eig optimization and analyses for general ensembles of utility models, for example to optimize $\text{N}_{\text{in}}$ for each problem and run the estimator over many trials.
