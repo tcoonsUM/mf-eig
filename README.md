@@ -17,7 +17,7 @@ pip install mxmcpy
 ```
 
 ## Tutorial/Usage
-Jupyter Notebook tutorial to be added soon.
+See our [Basic Tutorial](https://github.com/tcoonsUM/mf-eig/blob/main/Tutorials/basic_tutorial.ipynb) for the basic usage of the MF-EIG estimator for additive independent noise.
 
 ## Examples
 See [Final Paper Figures](https://github.com/tcoonsUM/mf-eig/tree/main/Final%20Paper%20Figures) to reproduce the results of our paper. Most data that require many CPU-hours of compute time are simply loaded in their respective scripts.
